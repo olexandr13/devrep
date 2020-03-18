@@ -22,6 +22,8 @@ module.exports = class RegistrationPage {
   async fillEmail() {
     const emailInput = await $('[name="email"]');
     await emailInput.setValue(this.email);
+    console.error('---------------------------------------------------------------------------------------------------');
+    console.log(this.email);
   }
 
   async fillPassword() {

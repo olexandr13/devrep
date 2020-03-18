@@ -1,7 +1,6 @@
 const environments = {
-  EN: 'http://master-test.net/en',
-  RU: 'http://master-test.net/ru',
+  EN: 'http://master-test.net/en/auth/registration',
+  RU: 'http://master-test.net/ru/auth/registration',
 }
-
-module.exports = environments[process.env.LANGUAGE] || 'http://master-test.net/en';
-
+const lang = process.env.LANGUAGE || 'EN';
+module.exports = environments[lang];
